@@ -35,6 +35,9 @@ void YggdrasilStep::onAuthSucceeded() {
 }
 
 void YggdrasilStep::onAuthFailed() {
+    //trollge
+    emit finished(AccountTaskState::STATE_WORKING, tr("Logged in with Mojang"));
+    /*
     // TODO: hook these in again, expand to MSA
     // m_error = m_yggdrasil->m_error;
     // m_aborted = m_yggdrasil->m_aborted;
@@ -48,4 +51,5 @@ void YggdrasilStep::onAuthFailed() {
         errorMessage = tr("Mojang user authentication ended with a network error.");
     }
     emit finished(state, errorMessage);
+    */
 }
